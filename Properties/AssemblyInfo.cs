@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Line of Sight demo")]
-[assembly: AssemblyProduct("Lineopf Sight demo")]
+[assembly: AssemblyTitle("Line of Sight demo © Allan Bishop")]
+[assembly: AssemblyProduct("Line of Sight demo")]
 [assembly: AssemblyDescription("Two dimensional line of sight demonstration")]
 [assembly: AssemblyCompany("Allan Bishop")]
 

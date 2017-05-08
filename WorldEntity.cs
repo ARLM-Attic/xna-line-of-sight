@@ -10,13 +10,8 @@
 #region Using Statements
 
 using System;
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
-using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Storage;
 
 #endregion
 
@@ -223,6 +218,8 @@ namespace AllanBishop.XNA
         /// </summary>
         /// <param name="point">vertex to rotate</param>
         /// <param name="angle">angle to rotate</param>
+        /// <returns>Vector rotated by an angle</returns>
+        //Based on http://www.nfostergames.com/xnaTipsAndLinks.htm
         private Vector2 RotatePointOnZAxis(Vector2 point, float angle)
         {
             // Create a rotation matrix that represents a rotation of angle radians.

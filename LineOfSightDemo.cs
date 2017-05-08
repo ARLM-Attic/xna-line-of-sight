@@ -6,10 +6,10 @@
  *     $Log$
  * 
  */
+
 #region Using Statements
 
 using System;
-using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -32,7 +32,7 @@ namespace AllanBishop.XNA
     /// else the screen background will remain blue
     /// 
     /// I have tried to optimise this code hence have minimised the use of new()
-    /// in the update and draw methods as well as minimise the use of any loops.
+    /// in the update and draw methods as well as minimised the use of any loops.
     /// 
     /// Also note that when running iTunes 7.1.1.5 and this code and using the keyboard
     /// a loader lock error is thrown. This is a iTunes/XNA issue, for the meantime I have
@@ -115,7 +115,7 @@ namespace AllanBishop.XNA
 
         #endregion
 
-
+        #region Methods
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
         /// This is where it can query for any required services and load any non-graphic
@@ -272,6 +272,7 @@ namespace AllanBishop.XNA
         /// </summary>
         /// <param name="point">vertex to rotate</param>
         /// <param name="angle">angle to rotate</param>
+        /// <returns>Vector rotated by an angle</returns>
         public Vector2 RotatePointOnZAxis(Vector2 point, float angle)
         {
             // Create a rotation matrix that represents a rotation of angle radians.
@@ -545,5 +546,6 @@ namespace AllanBishop.XNA
 
             base.Draw(gameTime);
         }
+        #endregion
     }
 }

@@ -33,7 +33,7 @@ namespace AllanBishop.XNA
     /// </summary>
     public class LineOfSight
     {
-        #region class members
+        #region Class Members
 
         private Vector2 _fovCameraPosition;
         private WorldEntity[] _worldEntities;
@@ -86,6 +86,7 @@ namespace AllanBishop.XNA
         /// <param name="fovCameraDirection">direction camera is facing</param>
         /// <param name="_fovCameraLeftAngleBoundary">a vector the lies on the edge of the FOV left boundary</param>
         /// <param name="_fovCameraRightAngleBoundary">a vector the lies on the edge of the FOV right boundary</param>  
+        /// <returns>True if the entity to detect is in the line of sight</returns>
 
         public bool InLineOfSight(Vector2 fovCameraPosition, Vector2 fovCameraDirection, Vector2 _fovCameraLeftAngleBoundary, Vector2 _fovCameraRightAngleBoundary)
         {
@@ -162,6 +163,7 @@ namespace AllanBishop.XNA
             return false;
         }
 
+        
         /// <summary>
         /// Returns true if the detectable entity is in the FOV regardless if other world entities are blocking it from sight
         /// </summary>
@@ -169,6 +171,9 @@ namespace AllanBishop.XNA
         /// <param name="_fovCameraDirectionFacing">direction camera is facing</param>
         /// <param name="posSecond">position of entity</param>
         /// <param name="fov">angle of the field of view (in radians)</param>  
+        /// <returns>true if posSecond in field of view</returns>
+        /// 
+        //Based on http://www.nfostergames.com/xnaTipsAndLinks.htm
         private bool isSecondInFOVofFirst(Vector2 posFirst, Vector2 _fovCameraDirectionFacing, Vector2 posSecond, double fov)
         {
             //the creation of the folowing vectors is too make the vectors a location from another vector
@@ -190,12 +195,9 @@ namespace AllanBishop.XNA
         /// <param name="c">start of second line</param>
         /// <param name="d">end of second line</param>  
         /// <param name="_result">returned vector of where (if) the two lines intersect</param>  
+        /// <returns> true if the line a,b intersects with line c,d. </returns>
         /// 
-        ///Method from http://www.ziggyware.com/readarticle.php?article_id=78
-        ///********************************************************************
-        ///Desc: Taken from comp.graphics.algorithms FAQ
-        ///*********************************************************************/
-
+        //Method from http://www.ziggyware.com/readarticle.php?article_id=78
         private static bool IntersectionOfTwoLines(Vector2 a, Vector2 b, Vector2 c,
                                        Vector2 d, ref Vector2 _result)
         {
@@ -251,9 +253,9 @@ namespace AllanBishop.XNA
         /// </summary>
         /// <param name="start">start of the line</param>
         /// <param name="end">end of the line</param>
+        /// <returns>True if a point on a line is able to be seen, else false if no points are able to be seen</returns>
         /// 
-        /// Bresenham's line algorithm portion of method from http://www.gamedev.net/reference/articles/article1275.asp
-        /// 
+        // Bresenham's line algorithm portion of method from http://www.gamedev.net/reference/articles/article1275.asp
         private bool IterateAlongLine(Vector2 start, Vector2 end)
         {
             int deltax = (int)Math.Abs(end.X - start.X);
