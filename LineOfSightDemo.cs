@@ -179,7 +179,7 @@ namespace AllanBishop.XNA
             {
                 // Load textures
                 greenSquareTexture = _content.Load<Texture2D>("Content/GreenSquare");
-                whiteSquareTexture = _content.Load<Texture2D>("Content/WhiteSquare");
+                whiteSquareTexture = _content.Load<Texture2D>("Content/PurpleSquare");
                 triangleTexture = _content.Load<Texture2D>("Content/Triangle");
                 concaveCircleTexture = _content.Load<Texture2D>("Content/CircularConcave");
                 lineTexture = _content.Load<Texture2D>("Content/Line");
