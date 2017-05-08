@@ -107,17 +107,17 @@
       <Processor>SpriteTextureProcessor</Processor>
       <Name>Person</Name>
     </Content>
+    <Content Include="Content\PurpleSquare.bmp">
+      <XNAUseContentPipeline>true</XNAUseContentPipeline>
+      <Importer>TextureImporter</Importer>
+      <Processor>SpriteTextureProcessor</Processor>
+      <Name>PurpleSquare</Name>
+    </Content>
     <Content Include="Content\Triangle.bmp">
       <XNAUseContentPipeline>true</XNAUseContentPipeline>
       <Importer>TextureImporter</Importer>
       <Processor>SpriteTextureProcessor</Processor>
       <Name>Triangle</Name>
-    </Content>
-    <Content Include="Content\WhiteSquare.bmp">
-      <XNAUseContentPipeline>true</XNAUseContentPipeline>
-      <Importer>TextureImporter</Importer>
-      <Processor>SpriteTextureProcessor</Processor>
-      <Name>WhiteSquare</Name>
     </Content>
     <Content Include="GameThumbnail.png">
       <XNAUseContentPipeline>false</XNAUseContentPipeline>

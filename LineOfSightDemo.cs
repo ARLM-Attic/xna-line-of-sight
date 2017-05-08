@@ -71,7 +71,7 @@ namespace AllanBishop.XNA
 
         Texture2D greenSquareTexture;
         Texture2D triangleTexture;
-        Texture2D whiteSquareTexture;
+        Texture2D purpleSquareTexture;
         Texture2D concaveCircleTexture;
         Texture2D lineTexture;
         Texture2D cursorCrosshairTexture;
@@ -179,7 +179,7 @@ namespace AllanBishop.XNA
             {
                 // Load textures
                 greenSquareTexture = _content.Load<Texture2D>("Content/GreenSquare");
-                whiteSquareTexture = _content.Load<Texture2D>("Content/PurpleSquare");
+                purpleSquareTexture = _content.Load<Texture2D>("Content/PurpleSquare");
                 triangleTexture = _content.Load<Texture2D>("Content/Triangle");
                 concaveCircleTexture = _content.Load<Texture2D>("Content/CircularConcave");
                 lineTexture = _content.Load<Texture2D>("Content/Line");
@@ -243,7 +243,7 @@ namespace AllanBishop.XNA
                 _concaveCircleEntity.Centroid = new Vector2(25.0f, 25.0f);
                 _concaveCircleEntity.Position = new Vector2(100.0f, 100.0f);
 
-                _purpleSquareEntity = new WorldEntity(whiteSquareTexture, squareVertices);
+                _purpleSquareEntity = new WorldEntity(purpleSquareTexture, squareVertices);
                 _purpleSquareEntity.Centroid = new Vector2(25.0f, 25.0f);
                 _purpleSquareEntity.Position = new Vector2(460.0f, 240.0f);
 
